@@ -47,7 +47,7 @@
             } else if (prevStalled) {
                 stickShake.pause();
             }
-            prev = a;
+            prevStalled = a;
             this.setVisOld(a);
         }
         // monkey-patch the setAnimationValue method
@@ -55,12 +55,13 @@
         unsafeWindow.flight.setAniValOld = unsafeWindow.flight.setAnimationValues;
         unsafeWindow.flight.setAnimationValues = function(a) {
             this.setAniValOld(a);
-            if (unsafeWindow.geofs.animation.values.kias >= 320 && !prevOversped){
+            let hasOversped = unsafeWindow.geofs.animation.values.kias >= 340;
+            if (hasOversped && !prevOversped){
                 overspeedClacker.play();
-            } else if (prevOversped){
+            } else if (!hasOversped && prevOversped){
                 overspeedClacker.pause();
             }
-            prevOversped = unsafeWindow.geofs.animation.values.kias >= 320;
+            prevOversped = hasOversped;
         }
     }
 })();
