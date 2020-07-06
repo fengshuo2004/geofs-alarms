@@ -2,7 +2,7 @@
 // @name         GeoFS-Alarms
 // @namespace    https://github.com/fengshuo2004/geofs-alarms
 // @version      0.1.2
-// @description  Adds cockpit alarm sounds to GeoFS
+// @description  Adds cockpit alarm sounds to GeoFS online flight simulator
 // @author       PEK-97
 // @match        https://www.geo-fs.com/geofs.php*
 // @grant        GM.getResourceUrl
@@ -55,7 +55,7 @@
         unsafeWindow.flight.setAniValOld = unsafeWindow.flight.setAnimationValues;
         unsafeWindow.flight.setAnimationValues = function(a) {
             this.setAniValOld(a);
-            let hasOversped = unsafeWindow.geofs.animation.values.kias >= 340;
+            let hasOversped = unsafeWindow.geofs.animation.values.kias >= 350;
             if (hasOversped && !prevOversped){
                 overspeedClacker.play();
             } else if (!hasOversped && prevOversped){

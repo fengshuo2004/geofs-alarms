@@ -4,15 +4,15 @@
 
 An userscript addon for GeoFS. Enhance your flight experience by adding cockpit alarms and callouts (GPWS, Radio Altimeter) to the flight simulator.
 
-**Project of VRAviation**
+![VRA Logo](vra_logo.png)
 
 Written by PEK-97 (aka David Feng) in 2020
 
 ## Installation
 
-Click the link above to install.
+👆 Click the link above to install.
 
-*needs Tampermonkey or other Userscript extension installed on your browser*
+*needs [Tampermonkey](https://www.tampermonkey.net/) or other Userscript extension installed on your browser*
 
 ## Default configuration
 
@@ -21,7 +21,7 @@ Click the link above to install.
 | Alarm Name |   Trigger on   | Sound Variants |
 | :--------- | :------------: | :------------- |
 | Stall      | Sim Detection  | Boeing         |
-| Overspeed  | Speed ≥ 340kts | Boeing         |
+| Overspeed  |  IAS ≥ 350kts  | Boeing         |
 | Bank Angle |   Roll ≥ 35°   | Boeing         |
 
 ## Known issues
